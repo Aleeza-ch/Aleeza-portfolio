@@ -1,0 +1,98 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 2px  2px 3px rgba(0, 0, 0, 0.2);
+}
+.Navbar .logo{
+  
+  margin-left: 4%;
+}
+.Navbar .logo a{
+  text-decoration: none;
+}
+
+.Navbar .logo h4 {
+  text-decoration: none;
+    font-size: 36px;
+    color: #2c4964;
+    font-weight: 700;  
+    font-family: serif;
+}
+
+.nav-dropdown {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: flex-end;
+  gap: 25px;
+  list-style: none;
+  margin-right: 3%;
+}
+
+.nav-menu li a {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 5%;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s ease;
+}
+.nav-menu li a:hover {
+  color: #d43076;
+}
+
+.nav-menu li a.active {
+  color: #d43076;
+}
+
+.nav-menu-visible {
+  display: flex;
+}
+html {
+  scroll-behavior: smooth;
+}
+@media (max-width: 1024px) {
+  .Navbar .logo h4{
+    font-size: 30px;
+  }
+  .nav-dropdown {
+    display: block;
+    width: 15px;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 200px;
+    text-decoration: none;
+  }
+  .nav-menu li a{
+    font-size: 14px;
+  }
+
+  .nav-menu.nav-menu-visible {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .Navbar .logo h4{
+    font-size: 27px;
+  }
+}

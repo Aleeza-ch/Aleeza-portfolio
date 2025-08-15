@@ -1,0 +1,115 @@
+.skills-section {
+  padding: 50px 70px;
+  background: #fff;
+  max-width: 100%;
+  margin: auto;
+}
+
+.skills-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: serif;
+  color: #2c4964;
+}
+.skills-section h2:after{
+    content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #d43076;
+  margin-top: 5px;
+}
+
+.skills-intro {
+  max-width: 100%;
+  margin-bottom: 40px;
+  color: #717070;
+  line-height: 1.6;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.skill-title {
+  font-weight: 600;
+  font-family: serif;
+  font-size: 15px;
+  color: #5a5959;
+  margin-bottom: 5px;
+}
+
+.skill-bar {
+  background: #eaeaea;
+  overflow: hidden;
+}
+
+.skill-fill {
+  background: #d43076;
+  color: white;
+  text-align: right;
+  padding-right: 8px;
+  height: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  width: 0; 
+}
+
+.skill-fill.animate {
+  animation: fillBar 1.5s ease forwards;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--fill-width);
+  }
+}
+
+.skill-percent {
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  font-size: 0.8rem;
+  color: #555;
+}
+@media(max-width:1024px)
+{
+    .skills-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .skills-section{
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  .skills-section {
+    padding: 30px 15px;
+  }
+  
+  .skill-percent {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 30px 10px;
+  }
+  .skills-section h2 {
+    font-size: 24px;
+  }
+  .skill-percent {
+    font-size: 12px;
+  }
+}
